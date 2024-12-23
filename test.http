@@ -1,0 +1,10 @@
+POST http://localhost:3000/api/blog
+Content-Type: multipart/form-data
+
+--boundary
+Content-Disposition: form-data; name="image"; filename="image.png"
+Content-Type: image/png
+
+< C:\Users\Omkar reddy\OneDrive\Desktop\next-blog-app\Assets\profile_icon.png
+--boundary--
+

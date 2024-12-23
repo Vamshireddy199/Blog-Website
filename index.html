@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload a Blog Post</h1>
+    <form action="http://localhost:3000/api/blog" method="POST" enctype="multipart/form-data">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" required />
+
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" rows="4" required></textarea>
+
+        <label for="category">Category:</label>
+        <input type="text" name="category" id="category" required />
+
+        <label for="author">Author Name:</label>
+        <input type="text" name="author" id="author" required />
+
+        <label for="authorImg">Author Image URL:</label>
+        <input type="text" name="authorImg" id="authorImg" />
+
+        <label for="image">Upload Image:</label>
+        <input type="file" name="image" id="image" accept="image/*" required />
+
+        <button type="submit">Upload Blog</button>
+    </form>
+</body>
+</html>
+
